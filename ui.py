@@ -1,4 +1,8 @@
 import streamlit as st
+import requests  # N'oublie pas d'installer requests (pip install requests)
+
+# Configuration de l'URL du backend
+API_URL = "http://127.0.0.1:8000/chat"
 
 st.set_page_config(
     page_title="Des Hommes et Des Arbres",
@@ -65,17 +69,54 @@ with st.sidebar:
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+# Affichage des messages précédents
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-if prompt := st.chat_input("De quoi dépend la production de bois par les forêts ?   "):
+# Gestion de la saisie utilisateur
+if prompt := st.chat_input("De quoi dépend la production de bois par les forêts ?"):
+    
+    # 1. Afficher le message de l'utilisateur tout de suite
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
+    # 2. Appeler le backend pour avoir la réponse
     with st.chat_message("assistant"):
-        response = "Message du backend" 
-        st.markdown(response)
+        with st.spinner("L'IA analyse le graphe..."):
+            try:
+                # Préparation des données comme attendu par ta classe ChatRequest dans main.py
+                payload = {"question": prompt, "thread_id": "streamlit_session"}
+                
+                # Envoi de la requête POST
+                response = requests.post(API_URL, json=payload)
+                
+                if response.status_code == 200:
+                    data = response.json()
+                    ai_response = data.get("response", "Erreur: Réponse vide.")
+                    st.markdown(ai_response)
+                    
+                    # Sauvegarder la réponse dans l'historique
+                    st.session_state.messages.append({"role": "assistant", "content": ai_response})
+                else:
+                    st.error(f"Erreur API ({response.status_code}) : {response.text}")
+            
+            except requests.exceptions.ConnectionError:
+                st.error("Impossible de se connecter au backend. Vérifie qu'il est bien lancé sur le port 8000.")
+            except Exception as e:
+                st.error(f"Une erreur est survenue : {str(e)}")
+
+with st.sidebar:
+    st.header("À propos")
+    st.write("""
+    **Des Hommes et des Arbres**
     
-    st.session_state.messages.append({"role": "assistant", "content": response})
+    Un collectif engagé pour l’avenir, avec et pour les arbres
+    """)
+    st.divider()
+    st.success("🌱 51 projets labellisés dans le Grand Est")
+    
+    # Petit curseur (Note: Pour l'instant ce paramètre n'est pas envoyé au backend dans ce code, 
+    # il faudrait modifier le backend pour accepter 'temperature' dans ChatRequest)
+    temperature = st.slider("Niveau d'inspiration de l'IA", 0.0, 1.0, 0.7)
