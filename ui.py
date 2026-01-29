@@ -6,6 +6,7 @@ from streamlit_mermaid import st_mermaid
 # Configuration de l'URL du backend
 API_URL = "http://127.0.0.1:8000/chat"
 
+
 st.set_page_config(
     page_title="Des Hommes et Des Arbres",
     page_icon="https://deshommesetdesarbres.org/wp-content/uploads/2021/03/cropped-favicon-dhda-32x32.png", # Teste avec cet emoji d'abord
@@ -57,16 +58,35 @@ def apply_dhda_design():
 apply_dhda_design()
 st.image("./logo_DHDA.png", width=250)
 
-st.title("Un collectif engagé pour l’avenir")
-st.caption("Explorez les liens entre thématiques, impacts et grandes variables")
+st.title("Posez-moi une question...")
+st.write("### Explorez les liens entre thématiques, impacts et grandes variables")
 
 with st.sidebar:
     st.markdown("### Le Collectif")
     st.write("""
     En Grand Est, Des Hommes et Des Arbres identifie, encourage et fait émerger des projets innovants avec et pour les arbres, au service des territoires.
     """)
+    st.markdown("""
+        <a href="https://www.deshommesetdesarbres.org/projets/" target="_blank" style="text-decoration: none;">
+            <div style="
+                display: inline-block;
+                padding: 6px 15px;
+                border-radius: 20px;
+                border: 1.5px solid #d100ff;
+                color: #d100ff;
+                font-size: 0.85rem;
+                font-weight: 500;
+                background-color: transparent;
+                transition: 0.3s;
+                ">
+                🔍 Découvrir nos projets
+            </div>
+        </a>
+    """, unsafe_allow_html=True)
     st.divider()
     st.success("🌱 51 projets labellisés dans le Grand Est")
+    st.divider()
+    
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -100,15 +120,12 @@ for message in st.session_state.messages:
         else:
             st.markdown(message["content"])
 
-# Gestion de la saisie utilisateur
 if prompt := st.chat_input("De quoi dépend la production de bois par les forêts ?"):
     
-    # 1. Afficher le message de l'utilisateur tout de suite
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # 2. Appeler le backend pour avoir la réponse
     with st.chat_message("assistant"):
         with st.spinner("L'IA analyse le graphe..."):
             try:
