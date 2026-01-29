@@ -32,7 +32,7 @@ def local_css():
 local_css()
 
 st.title("🌳 Des Hommes et des Arbres")
-st.write("## Explorez les liens entre thématiques, impacts et grandes variables")
+st.caption("Explorez les liens entre thématiques, impacts et grandes variables")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -51,3 +51,16 @@ if prompt := st.chat_input("De quoi dépend la production de bois par les forêt
         st.markdown(response)
     
     st.session_state.messages.append({"role": "assistant", "content": response})
+
+with st.sidebar:
+    st.header("À propos")
+    st.write("""
+    **Des Hommes et des Arbres**
+    
+    Un collectif engagé pour l’avenir, avec et pour les arbres
+    """)
+    st.divider()
+    st.success("🌱 51 projets labellisés dans le Grand Est")
+    
+    # Petit curseur pour ajuster le "ton" de l'IA (Créativité)
+    temperature = st.slider("Niveau d'inspiration de l'IA", 0.0, 1.0, 0.7)
