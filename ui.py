@@ -1,5 +1,7 @@
 import streamlit as st
 import requests  # N'oublie pas d'installer requests (pip install requests)
+import re
+from streamlit_mermaid import st_mermaid
 
 # Configuration de l'URL du backend
 API_URL = "http://127.0.0.1:8000/chat"
@@ -69,10 +71,34 @@ with st.sidebar:
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
+# --- FONCTION UTILITAIRE POUR EXTRAIRE LE MERMAID ---
+def split_response(text):
+    """
+    Sépare le texte explicatif du code Mermaid s'il existe.
+    Renvoie un tuple (texte_propre, code_mermaid_ou_none)
+    """
+    # Regex pour capturer le contenu entre ```mermaid et ```
+    pattern = r"```mermaid\s+(.*?)\s+```"
+    match = re.search(pattern, text, re.DOTALL)
+    
+    if match:
+        mermaid_code = match.group(1)
+        # On enlève le bloc de code du texte principal pour ne pas l'afficher en double
+        text_without_code = re.sub(pattern, "", text, flags=re.DOTALL).strip()
+        return text_without_code, mermaid_code
+    return text, None
+
 # Affichage des messages précédents
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+        # Si c'est un message assistant, on vérifie s'il y a du mermaid
+        if message["role"] == "assistant":
+            text, mermaid = split_response(message["content"])
+            st.markdown(text)
+            if mermaid:
+                st_mermaid(mermaid, height=300) # Tu peux ajuster la hauteur
+        else:
+            st.markdown(message["content"])
 
 # Gestion de la saisie utilisateur
 if prompt := st.chat_input("De quoi dépend la production de bois par les forêts ?"):
@@ -94,15 +120,24 @@ if prompt := st.chat_input("De quoi dépend la production de bois par les forêt
                 
                 if response.status_code == 200:
                     data = response.json()
-                    ai_response = data.get("response", "Erreur: Réponse vide.")
-                    st.markdown(ai_response)
+                    raw_response = data.get("response", "Erreur: Réponse vide.")
                     
-                    # Sauvegarder la réponse dans l'historique
-                    st.session_state.messages.append({"role": "assistant", "content": ai_response})
+                    # 1. On sépare le texte du graphique
+                    text_content, mermaid_code = split_response(raw_response)
+                    
+                    # 2. On affiche le texte
+                    st.markdown(text_content)
+                    
+                    # 3. On affiche le diagramme si présent
+                    if mermaid_code:
+                        st_mermaid(mermaid_code, height=350)
+                    
+                    # 4. On sauvegarde TOUT le contenu brut dans l'historique
+                    # (Comme ça au rechargement de la page, la boucle ci-dessus refera le parsing)
+                    st.session_state.messages.append({"role": "assistant", "content": raw_response})
+                
                 else:
-                    st.error(f"Erreur API ({response.status_code}) : {response.text}")
+                    st.error(f"Erreur API ({response.status_code})")
             
-            except requests.exceptions.ConnectionError:
-                st.error("Impossible de se connecter au backend. Vérifie qu'il est bien lancé sur le port 8000.")
             except Exception as e:
-                st.error(f"Une erreur est survenue : {str(e)}")
+                st.error(f"Erreur : {str(e)}")
