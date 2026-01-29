@@ -78,9 +78,11 @@ with st.sidebar:
     st.success("🌱 51 projets labellisés")
     
     st.divider()
-    st.subheader("🗺️ Navigation")
-    if st.button("⬅️ Retour à l'accueil"):
-        st.switch_page("ui.py")
+    st.subheader("🧭 Navigation")
+    if st.button("🏠 Page d'accueil"):
+        st.switch_page("app.py")
+    if st.button("💬 Assistant IA"):
+        st.switch_page("pages/Assistant_IA.py")
 
 st.image("./logo_DHDA.png", width=250)
 

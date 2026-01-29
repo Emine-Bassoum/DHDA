@@ -8,8 +8,8 @@ API_URL = "http://127.0.0.1:8000/chat"
 
 
 st.set_page_config(
-    page_title="Des Hommes et Des Arbres",
-    page_icon="https://deshommesetdesarbres.org/wp-content/uploads/2021/03/cropped-favicon-dhda-32x32.png", # Teste avec cet emoji d'abord
+    page_title="Assistant IA - DHDA",
+    page_icon="💬",
     layout="wide"
 )
 
@@ -122,8 +122,10 @@ with st.sidebar:
     st.success("🌱 51 projets labellisés")
     
     st.divider()
-    st.subheader("📊 Visualisation")
-    if st.button("🗺️ Voir le Graphe Miro"):
+    st.subheader("🧭 Navigation")
+    if st.button("🏠 Page d'accueil"):
+        st.switch_page("app.py")
+    if st.button("📊 Graphe Miro"):
         st.switch_page("pages/Graphe_Miro.py")
 
 if "messages" not in st.session_state:
