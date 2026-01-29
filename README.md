@@ -45,14 +45,16 @@ L'API sera accessible sur http://127.0.0.1:8000.
 ## 🐳 Déploiement avec Docker
 
 ### Build automatique via GitHub Actions
-Ce projet dispose d'un workflow GitHub Actions qui compile automatiquement le projet et crée une image Docker. L'image est publiée sur GitHub Container Registry (GHCR).
+Ce projet dispose d'un workflow GitHub Actions qui construit automatiquement une image Docker du projet. L'image est publiée sur GitHub Container Registry (GHCR).
 
 Le workflow se déclenche :
-- À chaque push sur les branches `main` ou `master`
-- À chaque pull request vers `main` ou `master`
-- Manuellement via l'onglet Actions
+- À chaque push sur les branches `main` ou `master` (avec publication de l'image)
+- À chaque pull request vers `main` ou `master` (build uniquement, pour validation)
+- Manuellement via l'onglet Actions (avec publication de l'image)
 
 ### Utiliser l'image Docker
+
+**Note**: Assurez-vous d'avoir créé un fichier `.env` à la racine du projet (voir section Configuration ci-dessus).
 
 Vous pouvez télécharger et utiliser l'image Docker publiée :
 
