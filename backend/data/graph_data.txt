@@ -1,1 +1,1993 @@
-Le diamètre (Variable) influence la croissance (Fonction).
+# Logigramme EvalSEF - Documentation Exhaustive de TOUS les Nœuds
+
+## Métadonnées du document
+- **Source :** Fichier SVG `IA-Kathon_logigrame_EvalSEF_3_.svg`
+- **Dimensions :** 21 639,83 × 18 723,99 pixels
+- **Outil de création :** Miro
+- **Projet :** IA-Kathon - Évaluation des Services Écosystémiques Forestiers (EvalSEF)
+- **Région d'étude :** Grand Est, France
+
+---
+
+# SECTION A : NŒUDS CLÉS (IMPACTS MAJEURS)
+
+Ces 4 nœuds sont les points de convergence principaux du diagramme. Ils sont représentés par des **rectangles rouges** (`#ff6464`) aux coins arrondis.
+
+---
+
+## A.1 Modifications climatiques
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOEUD-CLE-001 |
+| **Type** | Impact majeur / Nœud clé |
+| **Forme** | Rectangle aux coins arrondis (rayon 24px) |
+| **Couleur** | Rouge `#ff6464` |
+| **Dimensions** | 712,86 × 407,9 px |
+| **Coordonnées** | (2632.14, 11254.79) |
+
+**Description complète :**
+Ce nœud représente l'ensemble des modifications du climat qui affectent les écosystèmes forestiers du Grand Est. Il constitue un facteur de forçage externe majeur dans le système d'évaluation des services écosystémiques.
+
+**Texte explicatif associé (depuis le SVG) :**
+> "Le changement climatique a un effet sur l'émergence et l'évolution de certaines maladies dans le milieu forestier : le changement climatique modifie le cycle de vie des pathogènes."
+
+**Connexions SORTANTES :**
+
+| # | Nœud cible | Type de ligne | Couleur | Épaisseur | Justification |
+|---|------------|---------------|---------|-----------|---------------|
+| 1 | Présence de pathogènes | Courbe | `#bd0a0a` | 8px | Modification des cycles de vie des pathogènes |
+| 2 | Activités humaines | Pointillé bidirectionnel | `#bd0a0a` | 12px | Interaction réciproque climat-activités |
+| 3 | Variables biophysiques à grande échelle | Courbe | `#bd0a0a` | 8px | Impact global sur les paramètres écologiques |
+| 4 | Précipitations | Direct | `#bd0a0a` | 4px | Modification du régime pluviométrique |
+| 5 | Évapotranspiration | Direct | `#bd0a0a` | 4px | Changement des flux hydriques |
+| 6 | Risques incendie | Direct | `#bd0a0a` | 4px | Augmentation des risques |
+
+**Connexions ENTRANTES :**
+
+| # | Nœud source | Type de ligne | Justification |
+|---|-------------|---------------|---------------|
+| 1 | Activités humaines | Pointillé | Émissions de GES anthropiques |
+
+**Références bibliographiques associées :**
+- Marçais, 2019 (HAL: hal-02436700)
+
+---
+
+## A.2 Modification de l'usage des sols
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOEUD-CLE-002 |
+| **Type** | Impact majeur / Nœud clé |
+| **Forme** | Rectangle aux coins arrondis (rayon 24px) |
+| **Couleur** | Rouge `#ff6464` |
+| **Dimensions** | 712,86 × 407,9 px |
+| **Coordonnées** | (2632.14, 12000.24) |
+
+**Description complète :**
+Ce nœud représente les changements d'affectation des terres : déforestation, reboisement, conversion agricole, urbanisation, artificialisation. Ces modifications ont un impact direct sur la structure et le fonctionnement des écosystèmes forestiers.
+
+**Connexions SORTANTES :**
+
+| # | Nœud cible | Type de ligne | Couleur | Justification |
+|---|------------|---------------|---------|---------------|
+| 1 | Taux de boisement | Direct | `#1a1a1a` | Impact direct sur la couverture forestière |
+| 2 | Usages du sol | Direct | `#1a1a1a` | Modification des types d'occupation |
+| 3 | Diversité d'espèces végétales | Courbe | `#bd0a0a` | Impact sur la biodiversité floristique |
+| 4 | Type de peuplement forestier | Courbe | `#bd0a0a` | Changement de la composition forestière |
+
+**Connexions ENTRANTES :**
+
+| # | Nœud source | Type de ligne | Justification |
+|---|-------------|---------------|---------------|
+| 1 | Activités humaines | Pointillé rouge | Les activités humaines modifient l'occupation des sols |
+
+---
+
+## A.3 Activités humaines
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOEUD-CLE-003 |
+| **Type** | Impact majeur / Nœud clé |
+| **Forme** | Rectangle aux coins arrondis (rayon 24px) |
+| **Couleur** | Rouge `#ff6464` |
+| **Dimensions** | 670,1 × 397,55 px |
+| **Coordonnées** | (3738.01, 12626.81) |
+
+**Description complète :**
+Ce nœud central représente l'ensemble des interventions anthropiques directes et indirectes sur les écosystèmes forestiers. Il inclut les activités économiques, industrielles, récréatives et de gestion.
+
+**Texte explicatif associé (depuis le SVG) :**
+> "Les activités humaines se concentrent sur le phénomène de mondialisation qui favorise notamment l'émergence de nouveaux pathogènes."
+
+**Connexions SORTANTES :**
+
+| # | Nœud cible | Type de ligne | Couleur | Justification |
+|---|------------|---------------|---------|---------------|
+| 1 | Modifications climatiques | Pointillé (48,48) | `#bd0a0a` | Émissions de GES |
+| 2 | Modification de l'usage des sols | Pointillé | `#bd0a0a` | Urbanisation, déforestation |
+| 3 | Présence de pathogènes | Pointillé | `#bd0a0a` | Introduction d'espèces (mondialisation) |
+| 4 | Gestion forestière | Direct | `#1a1a1a` | Pratiques sylvicoles |
+| 5 | Infrastructures et aménagements | Direct | `#1a1a1a` | Construction d'infrastructures |
+| 6 | Libre évolution | Indirect | `#1a1a1a` | Décisions de mise en réserve |
+
+---
+
+## A.4 Présence de pathogènes
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOEUD-CLE-004 |
+| **Type** | Impact majeur / Nœud clé |
+| **Forme** | Rectangle aux coins arrondis (rayon 24px) |
+| **Couleur** | Rouge `#ff6464` |
+| **Dimensions** | ~700 × 400 px |
+
+**Description complète :**
+Ce nœud représente la présence et la dynamique des agents pathogènes (champignons, bactéries, virus, insectes ravageurs) dans les écosystèmes forestiers. Il illustre les interactions entre changement climatique et santé des forêts.
+
+**Texte explicatif associé :**
+> "interactions entre changement climatique et agents pathogènes"
+
+**Connexions SORTANTES :**
+
+| # | Nœud cible | Type de ligne | Justification |
+|---|------------|---------------|---------------|
+| 1 | Type de peuplement forestier | Courbe rouge | Modification de la composition (mortalité différentielle) |
+| 2 | Diversité des essences | Courbe rouge | Impact sur la diversité forestière |
+| 3 | Maturité des peuplements | Indirect | Perturbation des cycles de croissance |
+
+**Connexions ENTRANTES :**
+
+| # | Nœud source | Type de ligne | Justification |
+|---|-------------|---------------|---------------|
+| 1 | Modifications climatiques | Courbe rouge | Modification des cycles de vie des pathogènes |
+| 2 | Activités humaines | Pointillé rouge | Introduction de pathogènes exotiques |
+
+**Référence bibliographique :**
+- Marçais, 2019 : "étude des interactions entre changement climatique et agents pathogènes" (HAL: hal-02436700)
+
+---
+
+# SECTION B : VARIABLES BIOPHYSIQUES À GRANDE ÉCHELLE
+
+Ces variables sont représentées par des **parallélogrammes roses** (`#ffc6c6`). Elles sont regroupées dans un cadre de dimensions 1293,7 × 2541,61 px.
+
+---
+
+## B.1 Éléments anthropiques
+
+### B.1.1 Infrastructures et aménagements
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-ANTHRO-001 |
+| **Type** | Variable biophysique - Élément anthropique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+| **Catégorie** | Éléments anthropiques |
+
+**Description :**
+Cette variable quantifie la présence d'infrastructures (routes, chemins, bâtiments, équipements) dans ou à proximité des espaces forestiers. Elle influence directement l'accessibilité et les usages récréatifs.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Accessibilité | Direct | Les infrastructures déterminent l'accessibilité |
+| Usages du sol | Direct | Artificialisation des sols |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Activités humaines | Direct | Résultat des activités d'aménagement |
+
+---
+
+### B.1.2 Accessibilité
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-ANTHRO-002 |
+| **Type** | Variable biophysique - Élément anthropique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable mesure le degré d'accessibilité des espaces forestiers pour le public. Elle dépend du réseau d'infrastructures et influence fortement la capacité à fournir des services culturels.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Services culturels (zone bleue) | Direct | L'accessibilité permet les usages récréatifs |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Infrastructures et aménagements | Direct | Dépend du réseau d'accès |
+
+---
+
+## B.2 Biodiversité floristique et habitats
+
+### B.2.1 Type de peuplement forestier
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-FLOR-001 |
+| **Type** | Variable biophysique - Biodiversité floristique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable caractérise la nature du peuplement forestier : futaie, taillis, taillis-sous-futaie, mélange, etc. Elle influence directement la structure forestière et les habitats disponibles.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Structure forestière | Direct | Le type de peuplement détermine la structure |
+| Diversité des essences | Direct | Influence la composition spécifique |
+| Habitat, refuge et nurserie | Direct | Détermine les habitats disponibles |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Gestion forestière | Direct | Résultat des choix sylvicoles |
+| Présence de pathogènes | Indirect | Mortalité différentielle |
+
+**Source de données :**
+- Data IFN (Inventaire Forestier National)
+
+---
+
+### B.2.2 Diversité d'espèces végétales
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-FLOR-002 |
+| **Type** | Variable biophysique - Biodiversité floristique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable mesure la richesse spécifique végétale (arbres, arbustes, herbacées) présente dans les peuplements forestiers. Elle est un indicateur clé de la biodiversité floristique.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Indicateurs de la biodiversité fongique | Direct | La diversité végétale favorise la diversité fongique |
+| Habitat, refuge et nurserie | Direct | Diversité des niches écologiques |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Modification de l'usage des sols | Indirect | L'usage du sol affecte la diversité |
+| Gestion forestière | Indirect | Les pratiques influencent la diversité |
+
+**Sources de données :**
+- Data ONB (Observatoire National de la Biodiversité)
+- Data INPN MNHN
+
+---
+
+### B.2.3 Maturité des peuplements
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-FLOR-003 |
+| **Type** | Variable biophysique - Biodiversité floristique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable caractérise le stade de développement des peuplements forestiers : jeune, adulte, mature, sénescent. La maturité est corrélée à la présence de bois mort et de microhabitats.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Diversité caractéristique des vieux bois et bois morts | Direct | Les peuplements matures génèrent du bois mort |
+| Bois mort au sol total | Direct | Accumulation dans les peuplements matures |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Mesures dendrométriques de terrain | Direct | Mesure de l'âge et du diamètre |
+| Gestion forestière | Direct | Les pratiques influencent la maturité |
+
+**Source de données :**
+- Data IFN
+- Data Life BiodivEst PSDRF
+
+---
+
+### B.2.4 Nombre d'espèces nicheuses
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-FLOR-004 |
+| **Type** | Variable biophysique - Biodiversité floristique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable compte le nombre d'espèces d'oiseaux (et autres animaux) qui nichent dans les arbres et structures forestières. C'est un indicateur de la qualité des habitats forestiers.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Biodiversité faunistique | Direct | Contribue à la biodiversité animale totale |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Structure forestière | Direct | La structure influence les sites de nidification |
+
+---
+
+## B.3 Biodiversité faunistique
+
+### B.3.1 Densité des animaux
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-FAUN-001 |
+| **Type** | Variable biophysique - Biodiversité faunistique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable mesure l'abondance des populations animales (mammifères, oiseaux, insectes, etc.) par unité de surface forestière.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Habitat, refuge et nurserie | Direct | Indicateur de la capacité d'accueil |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Diversité d'espèces végétales | Indirect | La diversité végétale soutient la faune |
+| Structure forestière | Indirect | La structure influence les populations |
+
+---
+
+### B.3.2 Diversité des animaux
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-FAUN-002 |
+| **Type** | Variable biophysique - Biodiversité faunistique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable mesure la richesse spécifique animale présente dans les écosystèmes forestiers : nombre d'espèces de mammifères, oiseaux, amphibiens, reptiles, insectes.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Habitat, refuge et nurserie | Direct | Indicateur de biodiversité fonctionnelle |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Data ONB | Direct | Source de données faunistiques |
+| Data INPN MNHN | Direct | Inventaire national du patrimoine naturel |
+
+---
+
+## B.4 Biodiversité fongique
+
+### B.4.1 Indicateurs de la biodiversité fongique
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-FONG-001 |
+| **Type** | Variable biophysique - Biodiversité fongique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable regroupe les indicateurs de diversité des champignons forestiers : champignons mycorhiziens, saprotrophes, pathogènes. Les champignons jouent un rôle crucial dans le fonctionnement des écosystèmes forestiers.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Caractéristiques biologiques des sols | Direct | Les champignons font partie de la vie du sol |
+| Fertilité des sols | Indirect | Rôle dans le cycle des nutriments |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Diversité d'espèces végétales | Direct | Symbioses mycorhiziennes |
+| Bois mort au sol total | Direct | Substrat pour champignons saprotrophes |
+
+---
+
+## B.5 Structure et composition forestière
+
+### B.5.1 Diversité des essences
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-STRUCT-001 |
+| **Type** | Variable biophysique - Structure forestière |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable mesure la diversité des essences d'arbres présentes dans les peuplements : nombre d'essences, indices de diversité (Shannon, Simpson), répartition des espèces.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Habitat, refuge et nurserie | Direct | Diversité des niches disponibles |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Type de peuplement forestier | Direct | Le type influence la composition |
+| Gestion forestière | Direct | Choix des essences à favoriser |
+| Data IFN | Direct | Source de données sur les essences |
+
+---
+
+### B.5.2 Structure forestière
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-STRUCT-002 |
+| **Type** | Variable biophysique - Structure forestière |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable caractérise l'organisation verticale et horizontale du peuplement : stratification, couvert, densité, distribution des diamètres, présence de trouées.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Nombre d'espèces nicheuses | Direct | La structure influence les sites de nidification |
+| Naturalité anthropique | Direct | Indicateur de naturalité structurelle |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Gestion forestière | Direct | La gestion façonne la structure |
+| Mesures dendrométriques de terrain | Direct | Mesures de la structure |
+| Data IFN | Direct | Données de structure |
+
+---
+
+### B.5.3 Naturalité anthropique
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-STRUCT-003 |
+| **Type** | Variable biophysique - Structure forestière |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable mesure le degré de naturalité des forêts du point de vue de l'intervention humaine : forêts exploitées, forêts peu gérées, forêts en libre évolution, forêts primaires.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Services culturels | Direct | Valeur patrimoniale et récréative |
+| Services écosystémiques (global) | Indirect | Influence la fourniture de multiples services |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Structure forestière | Direct | La structure reflète la naturalité |
+| Libre évolution | Direct | La mise en réserve augmente la naturalité |
+
+---
+
+## B.6 Bois mort et vieux bois
+
+### B.6.1 Diversité caractéristique des vieux bois et bois morts
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-BOIS-001 |
+| **Type** | Variable biophysique - Bois mort |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable caractérise la diversité des types de bois mort et vieux bois présents : arbres morts sur pied (chandelles), arbres sénescents, souches, branches au sol, microhabitats (cavités, fissures, écorce décollée).
+
+**Texte associé (SVG) :**
+> "bois mort, microhabitats, très gros bois"
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Habitat, refuge et nurserie | Direct | Habitats pour faune saproxylique |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Maturité des peuplements | Direct | Les peuplements matures génèrent plus de diversité |
+| Data Life BiodivEst PSDRF | Direct | Protocole de suivi du bois mort |
+
+---
+
+### B.6.2 Bois mort au sol total
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-BOIS-002 |
+| **Type** | Variable biophysique - Bois mort |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable quantifie le volume total de bois mort au sol (débris ligneux grossiers) par unité de surface, exprimé généralement en m³/ha.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Indicateurs de la biodiversité fongique | Direct | Substrat pour champignons saprotrophes |
+| Habitat, refuge et nurserie | Direct | Habitat pour invertébrés et micro-organismes |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Maturité des peuplements | Direct | Accumulation dans les vieux peuplements |
+| Mesures dendrométriques de terrain | Direct | Mesure sur le terrain |
+| Data Life BiodivEst PSDRF | Direct | Protocole PSDRF |
+
+---
+
+## B.7 Modulateurs anthropiques
+
+### B.7.1 Libre évolution
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-MOD-001 |
+| **Type** | Variable biophysique - Modulateur anthropique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable indique si une forêt est laissée en libre évolution (sans intervention sylvicole) : réserves biologiques intégrales, réserves naturelles, îlots de sénescence.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Naturalité anthropique | Direct | La libre évolution maximise la naturalité |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Gestion forestière | Direct | Décision de mise en réserve |
+| Activités humaines | Indirect | Choix de protection |
+
+---
+
+### B.7.2 Taux de boisement
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-MOD-002 |
+| **Type** | Variable biophysique - Modulateur anthropique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable mesure le pourcentage de surface forestière dans un territoire donné. C'est un indicateur clé de la couverture forestière régionale.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Services écosystémiques (global) | Direct | Le taux de boisement influence tous les services |
+| Stabilisation des sols forestiers | Indirect | Protection des sols par la forêt |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Modification de l'usage des sols | Direct | Les changements d'usage modifient le taux |
+| Usages du sol | Direct | Relation directe avec l'occupation |
+
+---
+
+### B.7.3 Usages du sol
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-MOD-003 |
+| **Type** | Variable biophysique - Modulateur anthropique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable décrit les types d'occupation du sol : forêt, agriculture, zones urbaines, prairies, zones humides, etc.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Taux de boisement | Direct | Détermine la surface forestière |
+| Infrastructures et aménagements | Direct | Les usages incluent les zones aménagées |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Modification de l'usage des sols | Direct | Les changements modifient les usages |
+| Activités humaines | Indirect | Les activités déterminent les usages |
+
+---
+
+### B.7.4 Caractéristiques topographiques
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-MOD-004 |
+| **Type** | Variable biophysique - Modulateur anthropique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable caractérise la topographie du terrain : altitude, pente, exposition, position sur le versant. Ces paramètres influencent les conditions écologiques et les risques.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Risques incendie | Direct | La topographie influence la propagation du feu |
+| Caractéristiques physiques des sols | Direct | La topographie influence l'érosion et les sols |
+
+**Connexions ENTRANTES :**
+Aucune connexion entrante (variable naturelle de contexte)
+
+---
+
+# SECTION C : EAU ET SOLS
+
+Cette section regroupe les variables liées au cycle de l'eau et aux caractéristiques des sols forestiers.
+
+---
+
+## C.1 Eau verte et paramètres de quantité d'eau
+
+### C.1.1 Stock de l'eau verte
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-EAU-001 |
+| **Type** | Variable biophysique - Eau |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+| **Libellé SVG** | "Srock de l'eau verte dans..." |
+
+**Description :**
+L'eau verte désigne l'eau du sol disponible pour les plantes et retournant à l'atmosphère par évapotranspiration. Le stock d'eau verte est crucial pour le fonctionnement des écosystèmes forestiers.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Évapotranspiration | Direct | L'eau verte alimente l'évapotranspiration |
+| Services de régulation | Indirect | Régulation du cycle hydrologique |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Précipitations | Direct | Les précipitations alimentent le stock |
+| Modifications climatiques | Indirect | Le climat modifie les stocks |
+
+---
+
+### C.1.2 Quantité d'éléments de l'eau bleue
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-EAU-002 |
+| **Type** | Variable biophysique - Eau |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+| **Libellé SVG** | "Quantité d'éléments de l'eau bleue" |
+
+**Description :**
+L'eau bleue désigne l'eau de surface et souterraine (ruissellement, nappes, cours d'eau). Cette variable quantifie les flux d'eau bleue générés par les forêts.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Services de régulation | Direct | Régulation des ressources en eau |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Précipitations | Direct | Les précipitations génèrent l'eau bleue |
+
+---
+
+### C.1.3 Précipitations
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-EAU-003 |
+| **Type** | Variable biophysique - Eau |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable représente les apports en eau atmosphérique (pluie, neige) sur les surfaces forestières. C'est le principal intrant du cycle hydrologique forestier.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Stock de l'eau verte | Direct | Alimentation du stock d'eau du sol |
+| Quantité d'éléments de l'eau bleue | Direct | Génération du ruissellement |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Modifications climatiques | Direct | Le changement climatique modifie le régime pluviométrique |
+
+---
+
+### C.1.4 Évapotranspiration
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-EAU-004 |
+| **Type** | Variable biophysique - Eau |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable mesure les flux d'eau retournant à l'atmosphère par évaporation (sol, surfaces) et transpiration (végétation). Les forêts sont des acteurs majeurs de l'évapotranspiration.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Services de régulation | Direct | Régulation climatique locale |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Stock de l'eau verte | Direct | L'eau verte est la source de l'évapotranspiration |
+| Modifications climatiques | Direct | Le climat influence les taux d'évapotranspiration |
+
+---
+
+## C.2 Caractéristiques des sols
+
+### C.2.1 Caractéristiques physiques des sols
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-SOL-001 |
+| **Type** | Variable biophysique - Sol |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable caractérise les propriétés physiques des sols forestiers : texture (argile, limon, sable), structure, porosité, profondeur, pierrosité, capacité de rétention d'eau.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Stabilisation des sols forestiers | Direct | Les propriétés physiques influencent la stabilité |
+| Fertilité des sols | Direct | Composante de la fertilité globale |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Caractéristiques topographiques | Direct | La topographie influence la formation des sols |
+
+---
+
+### C.2.2 Caractéristiques chimiques des sols
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-SOL-002 |
+| **Type** | Variable biophysique - Sol |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable caractérise les propriétés chimiques des sols forestiers : pH, teneur en nutriments (N, P, K, Ca, Mg), capacité d'échange cationique, saturation en bases.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Fertilité des sols | Direct | Composante majeure de la fertilité |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Taux de carbone | Direct (via transformateur) | Le carbone influence les propriétés chimiques |
+
+---
+
+### C.2.3 Caractéristiques biologiques des sols
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-SOL-003 |
+| **Type** | Variable biophysique - Sol |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable caractérise la vie biologique des sols forestiers : biomasse microbienne, faune du sol (vers de terre, collemboles, acariens), activité enzymatique, respiration du sol.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Fertilité des sols | Direct | L'activité biologique contribue à la fertilité |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Indicateurs de la biodiversité fongique | Direct | Les champignons font partie de la vie du sol |
+
+---
+
+## C.3 Stabilisation et fertilité des sols
+
+### C.3.1 Stabilisation des sols forestiers
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-STAB-001 |
+| **Type** | Indicateur de fonction écosystémique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Vert clair `#adf0c7` |
+| **Cadre** | Zone verte (2775,69 × 1502,77 px) |
+
+**Description :**
+Cette variable évalue la capacité des forêts à protéger les sols contre l'érosion. Elle est liée à l'équilibre entre pédogenèse (formation de sol) et érosion.
+
+**Texte associé (SVG) :**
+> "(équilibre en pédogenèse et érosion)"
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Services de régulation | Direct | Service de régulation de l'érosion |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Caractéristiques physiques des sols | Direct | Les sols stables résistent à l'érosion |
+| Taux de boisement | Indirect | La couverture forestière protège les sols |
+
+---
+
+### C.3.2 Fertilité des sols
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-FERT-001 |
+| **Type** | Indicateur de fonction écosystémique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Vert clair `#adf0c7` |
+| **Cadre** | Zone verte (2775,69 × 1502,77 px) |
+
+**Description :**
+Cette variable évalue la capacité des sols forestiers à soutenir la croissance végétale. Elle intègre les caractéristiques physiques, chimiques et biologiques des sols.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Services d'approvisionnement | Direct | La fertilité permet la production de bois |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Caractéristiques physiques des sols | Direct | Composante physique de la fertilité |
+| Caractéristiques chimiques des sols | Direct | Composante chimique de la fertilité |
+| Caractéristiques biologiques des sols | Direct | Composante biologique de la fertilité |
+| Indicateurs de la biodiversité fongique | Indirect | Rôle des champignons dans la fertilité |
+
+---
+
+# SECTION D : MESURES ET DONNÉES DE TERRAIN
+
+---
+
+## D.1 Mesures dendrométriques de terrain
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | MES-001 |
+| **Type** | Mesure de terrain |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Ce nœud représente l'ensemble des mesures effectuées sur le terrain pour caractériser les peuplements forestiers : diamètres, hauteurs, densités, volumes, surfaces terrières, présence de bois mort.
+
+**Texte associé (SVG) :**
+> "mesures dendrométrique"
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Structure forestière | Direct | Les mesures caractérisent la structure |
+| Maturité des peuplements | Direct | Les mesures permettent d'évaluer la maturité |
+| Bois mort au sol total | Direct | Quantification du bois mort |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Data IFN | Direct | Protocole de mesure IFN |
+| Data Life BiodivEst PSDRF | Direct | Protocole PSDRF |
+
+---
+
+# SECTION E : FONCTIONS ÉCOSYSTÉMIQUES
+
+---
+
+## E.1 Habitat, refuge et nurserie
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | FONC-001 |
+| **Type** | Fonction écosystémique |
+| **Forme** | Parallélogramme |
+| **Couleur** | Vert clair `#adf0c7` |
+| **Cadre** | Zone à bordure verte (épaisseur 48px) |
+| **Libellé complet** | "Biodiversité : Habitat, refuge et nurserie" |
+
+**Description :**
+Cette fonction écosystémique représente la capacité des forêts à fournir des habitats, des refuges et des zones de reproduction pour la faune et la flore. C'est une fonction centrale qui alimente plusieurs services écosystémiques.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Services d'approvisionnement | Direct | Habitat pour espèces chassables/cueillables |
+| Services culturels | Direct | Valeur de biodiversité pour récréation |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Type de peuplement forestier | Direct | Le type influence les habitats |
+| Diversité d'espèces végétales | Direct | Diversité des niches |
+| Diversité des essences | Direct | Variété des habitats |
+| Diversité caractéristique des vieux bois | Direct | Microhabitats |
+| Bois mort au sol total | Direct | Habitat saproxylique |
+| Densité des animaux | Direct | Indicateur de capacité d'accueil |
+| Diversité des animaux | Direct | Richesse faunistique |
+
+---
+
+# SECTION F : TRANSFORMATEURS
+
+Les transformateurs sont des **hexagones** qui convertissent des variables brutes en indicateurs utilisables.
+
+---
+
+## F.1 Transformateur principal
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | TRANS-001 |
+| **Type** | Transformateur |
+| **Forme** | Hexagone |
+| **Dimensions** | 570,8 × 150,28 px |
+
+**Description :**
+Ce transformateur central agrège les différentes variables biophysiques pour produire des indicateurs de fonctions écosystémiques. Il représente l'étape de calcul/modélisation qui convertit les données brutes en indicateurs synthétiques.
+
+**Fonction :**
+Variables biophysiques → Agrégation → Indicateurs de fonctions écosystémiques
+
+---
+
+## F.2 Taux de carbone (Transformateur)
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | TRANS-002 |
+| **Type** | Transformateur |
+| **Forme** | Hexagone |
+
+**Description :**
+Ce transformateur convertit les mesures de terrain (prélèvements de sol, analyses) en indicateur de taux de carbone, qui alimente ensuite les caractéristiques chimiques des sols.
+
+**Fonction :**
+Mesures de terrain → Analyse → Taux de carbone → Caractéristiques chimiques des sols
+
+
+---
+
+# SECTION G : BASES DE DONNÉES
+
+Les bases de données sont représentées par des **cylindres gris** (`#b0b0b0`), symbolisant le stockage de données.
+
+---
+
+## G.1 Data IFN (Inventaire Forestier National)
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DB-001 |
+| **Type** | Base de données |
+| **Forme** | Cylindre |
+| **Couleur** | Gris `#b0b0b0` |
+| **Dimensions** | 356,54 × 212,21 px |
+
+**Description :**
+L'Inventaire Forestier National (IFN) est la principale source de données sur les forêts françaises. Géré par l'IGN, il fournit des informations sur la surface, la composition, la structure et la production des forêts.
+
+**Métadonnées (depuis le SVG) :**
+
+| Paramètre | Valeur |
+|-----------|--------|
+| **Profondeur temporelle** | 2019 - 2023 (données les plus récentes) |
+| **Fréquence** | Annuelle avec pondérations des résultats tous les 5 ans |
+| **Densité spatiale** | Mailles de 1km² |
+| **URL** | https://inventaire-forestier.ign.fr/dataifn/ |
+
+**Texte associé (SVG) :**
+> "Données brutes depuis 2005"
+> "Informations de l'IGN sur les forêts"
+
+**Produits dérivés :**
+- Affichage DATAIFN (visualisation)
+- Téléchargement DATAIFN (export des données brutes)
+- Kit PRFB Grand Est (données régionales)
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Mesures dendrométriques de terrain | Direct | Source des données de terrain |
+| Structure forestière | Direct | Données sur la structure |
+| Diversité des essences | Direct | Données sur les essences |
+| Type de peuplement forestier | Direct | Classification des peuplements |
+
+---
+
+## G.2 Data ONB (Observatoire National de la Biodiversité)
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DB-002 |
+| **Type** | Base de données |
+| **Forme** | Cylindre |
+| **Couleur** | Gris `#b0b0b0` |
+
+**Description :**
+L'Observatoire National de la Biodiversité (ONB) compile et diffuse des indicateurs sur l'état de la biodiversité en France. Il s'appuie sur de nombreuses sources de données naturalistes.
+
+**Texte associé (SVG) :**
+> "Observatoire national de la biodiversité (ONB)"
+> "liens ONB, INPN etc."
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Diversité des animaux | Direct | Données faunistiques |
+| Diversité d'espèces végétales | Direct | Données floristiques |
+
+---
+
+## G.3 Data Life BiodivEst PSDRF
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DB-003 |
+| **Type** | Base de données / Protocole |
+| **Forme** | Cylindre |
+| **Couleur** | Gris `#b0b0b0` |
+
+**Description :**
+Le PSDRF (Protocole de Suivi Dendrométrique des Réserves Forestières) est un protocole standardisé de suivi des forêts à haute valeur de conservation. Le projet LIFE BiodivEst a permis son déploiement dans le Grand Est.
+
+**Métadonnées (depuis le SVG) :**
+
+| Paramètre | Valeur |
+|-----------|--------|
+| **Création** | 1994 |
+| **Fréquence** | Tous les 10 ans |
+| **Densité Grand Est** | 3000 placettes de plus de 5 ha |
+| **Densité nationale** | 16000 placettes à l'échelle nationale |
+| **Application** | Réserves biologiques et naturelles |
+
+**Texte associé (SVG) :**
+> "Protocole PSDRF : Protocole très fin appliqué aux réserves biologiques et naturelles"
+> "Selon Eugénie Cateau (entretien 2025) méthode PSDRF"
+
+**Outils associés :**
+- GéoNature PSDRF (nécessite compte RNF)
+- Protocole vieilles forêts des Pyrénées
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Mesures dendrométriques de terrain | Direct | Protocole de mesure |
+| Bois mort au sol total | Direct | Quantification du bois mort |
+| Diversité caractéristique des vieux bois | Direct | Suivi des microhabitats |
+
+---
+
+## G.4 Data INPN MNHN
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DB-004 |
+| **Type** | Base de données |
+| **Forme** | Cylindre |
+| **Couleur** | Gris `#b0b0b0` |
+| **Cadre** | Bordure rose `#e17893` (épaisseur 48px) |
+
+**Description :**
+L'Inventaire National du Patrimoine Naturel (INPN), géré par le Muséum National d'Histoire Naturelle (MNHN), est la plateforme nationale de référence pour les données de biodiversité.
+
+**URL :** https://inpn.mnhn.fr/collTerr/biodiversity/INSEER44
+
+**Note importante (SVG) :**
+> "Le site semble ne pas fonctionner (08.08.25)"
+
+**Texte associé :**
+> "Base de données INPN"
+> "INPN : MNHN : espèces du Grand EST"
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Diversité des animaux | Direct | Données faunistiques nationales |
+| Diversité d'espèces végétales | Direct | Données floristiques nationales |
+
+---
+
+## G.5 GéoNature PSDRF
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DB-005 |
+| **Type** | Plateforme de données |
+| **Forme** | Rectangle gris |
+
+**Description :**
+GéoNature PSDRF est l'outil de saisie et de consultation des données du protocole PSDRF. L'accès nécessite un compte auprès de Réserves Naturelles de France (RNF).
+
+**Texte associé (SVG) :**
+> "GéoNature PSDRF (ouvert si compte RNF) permet l'import du protocole et rapport dendrométrique."
+
+**Accès :** Réservé aux membres RNF
+
+---
+
+## G.6 Kit PRFB Grand Est
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DB-006 |
+| **Type** | Jeu de données dérivé |
+| **Forme** | Rectangle ondulé jaune |
+
+**Description :**
+Le Kit PRFB Grand Est est un jeu de données pré-compilé à partir de l'IFN, spécifiquement formaté pour les besoins du Programme Régional de la Forêt et du Bois du Grand Est.
+
+**Texte associé (SVG) :**
+> "IFN Kit PRFB Grand Est"
+> "Kits PRFB de données nationales triées pour la région Grand Est"
+> "kit de données pré-triées par région"
+
+**Source :** Data IFN (extraction régionale)
+
+---
+
+## G.7 Affichage DATAIFN
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DB-007 |
+| **Type** | Interface de visualisation |
+| **Forme** | Rectangle gris |
+
+**Description :**
+Interface web de visualisation des données de l'Inventaire Forestier National permettant la consultation cartographique et tabulaire des résultats.
+
+---
+
+## G.8 Téléchargement DATAIFN
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DB-008 |
+| **Type** | Service de téléchargement |
+| **Forme** | Rectangle ondulé jaune |
+
+**Description :**
+Service permettant le téléchargement des données brutes de l'IFN pour des analyses personnalisées.
+
+**Texte associé (SVG) :**
+> "Téléchargement du 2005.zip"
+> "Données brutes depuis 2005"
+> "données disponibles les plus récentes : 2019 - 2023"
+
+---
+
+# SECTION H : DOCUMENTS DE RÉFÉRENCE
+
+Les documents de référence sont représentés par des **rectangles ondulés jaunes** (`#fff6b6`).
+
+---
+
+## H.1 DRA (Directives Régionales d'Aménagement)
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DOC-001 |
+| **Type** | Document réglementaire |
+| **Forme** | Rectangle ondulé |
+| **Couleur** | Jaune `#fff6b6` |
+
+**Description :**
+Les Directives Régionales d'Aménagement (DRA) sont des documents réglementaires qui encadrent la gestion des forêts domaniales (forêts de l'État). Chaque aménagement forestier doit s'y conformer.
+
+**Texte complet (SVG) :**
+> "Directive Forestière Régional d'Aménagement : Les directives régionales d'aménagement (DRA) des forêts domaniales sont des documents directeurs qui encadrent l'élaboration des aménagements forestiers"
+
+**Base légale :**
+> "Le Code forestier définit le contenu des DRA (articles D.122-2 et suivants) auquel chaque aménagement se réfère."
+
+**Documents disponibles pour le Grand Est :**
+
+| Document | Année |
+|----------|-------|
+| DRA Alsace | 2009 |
+| DRA Lorraine | 2006 |
+| DRA Champagne-Ardennes | Non daté dans SVG |
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Gestion forestière | Direct | Prescriptions de gestion pour forêts domaniales |
+
+---
+
+## H.2 SRA (Schémas Régionaux d'Aménagement)
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DOC-002 |
+| **Type** | Document réglementaire |
+| **Forme** | Rectangle ondulé |
+| **Couleur** | Jaune `#fff6b6` |
+
+**Description :**
+Les Schémas Régionaux d'Aménagement (SRA) sont l'équivalent des DRA pour les forêts des collectivités (communes, départements, régions).
+
+**Texte complet (SVG) :**
+> "Schéma Régional d'Aménagement : Les schémas régionaux d'aménagement (SRA) des forêts des collectivités sont des documents directeurs qui encadrent l'élaboration des aménagements"
+
+**Base légale :**
+> "Code forestier définit le contenu des SRA (articles D.122-6 et suivants)"
+
+**Documents disponibles pour le Grand Est :**
+
+| Document | Année | Lien |
+|----------|-------|------|
+| SRA Alsace | 2009 | - |
+| SRA Lorraine | 2006 | - |
+| SRA Champagne-Ardennes | 2011 | Lien ONF disponible |
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Gestion forestière | Direct | Prescriptions de gestion pour forêts communales |
+
+---
+
+## H.3 PRFB Grand Est 2018-2027
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DOC-003 |
+| **Type** | Document stratégique |
+| **Forme** | Rectangle ondulé |
+| **Couleur** | Jaune `#fff6b6` |
+| **Cadre** | Bordure verte `#0eb306` (épaisseur ~100px, rayon 100px) |
+| **Dimensions cadre** | 1398,17 × 1384,36 px |
+
+**Description :**
+Le Programme Régional de la Forêt et du Bois (PRFB) du Grand Est est le document stratégique de planification forestière pour la période 2018-2027. Il décline les orientations nationales au niveau régional.
+
+**Texte complet (SVG) :**
+> "PRFB Grand Est 2018-2027, 2019"
+> "Le PRFB Grand Est est un document stratégique de planification forestière pour la région Grand Est. Il s'articule autour de deux parties principales : un diagnostic écologique, économique et social du massif forestier régional, et des orientations de la gestion durable des forêts privées de la région Grand Est."
+
+**Axes stratégiques (4) :**
+1. Renforcer l'interprofession
+2. Développer la compétitivité de la filière
+3. Dynamiser formation et communication
+4. Gérer durablement la forêt
+
+**Texte associé (SVG) :**
+> "Il décline au niveau régional les orientations du Programme national forêt-bois et fixe les objectifs de gestion durable des forêts en tenant compte des spécificités du territoire. Il se structure en quatre axes stratégiques : renforcer l'interprofession, développer la compétitivité de la filière, dynamiser formation et communication, et gérer durablement la forêt."
+
+**Contient :**
+- Kit PRFB Grand Est (données IFN régionales)
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Gestion forestière | Direct | Orientations stratégiques de gestion |
+
+---
+
+## H.4 Marçais, 2019 (Étude scientifique)
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DOC-004 |
+| **Type** | Référence bibliographique scientifique |
+| **Forme** | Rectangle ondulé |
+| **Couleur** | Jaune `#fff6b6` |
+
+**Description :**
+Étude scientifique de Marçais (2019) sur les interactions entre changement climatique et pathogènes forestiers.
+
+**Référence HAL :** https://hal.science/hal-02436700/
+
+**Texte associé (SVG) :**
+> "étude des interactions entre changement climatique et agents pathogènes"
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Présence de pathogènes | Direct | Référence scientifique sur les pathogènes |
+| Modifications climatiques | Direct | Référence sur les impacts climatiques |
+
+---
+
+## H.5 Vieilles forêts des Pyrénées
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DOC-005 |
+| **Type** | Protocole scientifique |
+| **Forme** | Rectangle empilé jaune |
+
+**Description :**
+Protocole de caractérisation des vieilles forêts développé dans les Pyrénées. Ce protocole est moins détaillé que le PSDRF mais permet une application plus rapide.
+
+**Texte associé (SVG) :**
+> "Vieilles forêts des Pyrénées"
+> "Protocole des Pyrénées très gros bois. Moins précis que le PSDRF, mais plus rapide. Inspirant pour les forêts anciennes via méthode du PSDRF"
+
+**Utilisation :**
+Inspiration pour l'adaptation du PSDRF aux forêts anciennes
+
+---
+
+## H.6 SRGS Grand Est (Schéma Régional de Gestion Sylvicole)
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | DOC-006 |
+| **Type** | Document réglementaire |
+| **Forme** | Rectangle ondulé |
+| **Couleur** | Jaune `#fff6b6` |
+
+**Description :**
+Le Schéma Régional de Gestion Sylvicole (SRGS) encadre la gestion des forêts privées du Grand Est.
+
+**Texte associé (SVG) :**
+> "Le Schéma Régional de Gestion Sylvicole du Grand Est, orientations de la gestion durable des forêts privées de la région Grand Est"
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Gestion forestière | Direct | Cadre pour la gestion des forêts privées |
+
+---
+
+# SECTION I : NOTES ET ANNOTATIONS
+
+Les notes sont représentées par des **post-its jaune vif** (`#fff79e`).
+
+---
+
+## I.1 Note sur les DRA/SRA
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOTE-001 |
+| **Type** | Note / Question |
+| **Forme** | Post-it |
+| **Couleur** | Jaune vif `#fff79e` |
+| **Dimensions** | ~350 × 228 px |
+| **Échelle** | 1.16 |
+
+**Contenu :**
+> "Demander à l'ONF si les DRA et SRA plus récentes du Grand Est sont accessibles (contact Laurent Heurtheur, ONF GE)"
+
+**Action requise :** Contacter Laurent Heurtheur (ONF Grand Est) pour obtenir versions actualisées des DRA/SRA
+
+**Liée à :** DRA, SRA
+
+---
+
+## I.2 Note de Lise Maciejewski (entretien 2025)
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOTE-002 |
+| **Type** | Note d'expert |
+| **Forme** | Post-it |
+| **Couleur** | Jaune vif `#fff79e` |
+| **Dimensions** | ~199 × 228 px |
+| **Échelle** | 5.18 |
+
+**Contenu :**
+> "Lise Maciejewski (entretien 2025) met en garde par rapport à la difficulté de relier les états forestiers, les pratiques sylvicoles et services rendus."
+
+**Importance :** Avertissement méthodologique sur les liens variables-services
+
+**Liée à :** Relations entre variables biophysiques et services écosystémiques
+
+---
+
+## I.3 Note sur le site INPN
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOTE-003 |
+| **Type** | Note technique |
+| **Forme** | Post-it |
+| **Couleur** | Jaune vif `#fff79e` |
+
+**Contenu :**
+> "Le site semble ne pas fonctionner (08.08.25)"
+
+**Liée à :** Data INPN MNHN
+
+**Statut :** Problème technique à résoudre
+
+---
+
+## I.4 Discussion avec Léa Joly (entretien 2025)
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOTE-004 |
+| **Type** | Note d'entretien |
+| **Forme** | Post-it |
+| **Couleur** | Jaune vif `#fff79e` |
+
+**Contenu :**
+> "Discussion avec Léa Joly (entretien 2025)"
+
+**Source :** Entretien avec expert
+
+---
+
+## I.5 Note sur les données extrapolables
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOTE-005 |
+| **Type** | Question méthodologique |
+| **Forme** | Post-it |
+| **Couleur** | Jaune vif `#fff79e` |
+
+**Contenu :**
+> "Données que l'on peut extrapoler au Grand Est ?"
+
+**Question :** Pertinence d'extrapoler des données nationales à l'échelle régionale
+
+**Liée à :** Bases de données nationales
+
+---
+
+## I.6 Note sur Eugénie Cateau
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOTE-006 |
+| **Type** | Note d'expert |
+| **Forme** | Intégré au texte |
+
+**Contenu :**
+> "Selon Eugénie Cateau (entretien 2025) méthode PSDRF"
+
+**Source :** Entretien avec Eugénie Cateau (experte PSDRF)
+
+**Liée à :** Protocole PSDRF
+
+---
+
+## I.7 Note sur les études exploratoires
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | NOTE-007 |
+| **Type** | Note contextuelle |
+| **Forme** | Texte |
+
+**Contenu :**
+> "Utilisé pour cartographier les forêts anciennes via des études exploratoires."
+
+**Liée à :** Données historiques, forêts anciennes
+
+
+---
+
+# SECTION J : SERVICES ÉCOSYSTÉMIQUES
+
+Les services écosystémiques sont représentés par des **zones colorées avec bordures épaisses** (48px).
+
+---
+
+## J.1 Services d'approvisionnement
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | SE-001 |
+| **Type** | Service écosystémique |
+| **Forme** | Zone avec bordure épaisse |
+| **Couleur bordure** | Vert `#0eb306` |
+| **Épaisseur bordure** | 48px |
+| **Libellé** | "Service écosystémique forestier de type approvisionnement" |
+
+**Description :**
+Les services d'approvisionnement (ou services de prélèvement) correspondent aux produits directement obtenus des écosystèmes forestiers : bois d'œuvre, bois énergie, produits forestiers non ligneux (champignons, baies, gibier), eau potable.
+
+**Texte associé (SVG) :**
+> "Service écosystémique forestier de type 'approvisionnement'"
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Habitat, refuge et nurserie | Direct | Support de la production biologique |
+| Fertilité des sols | Direct | Capacité de production des sols |
+
+---
+
+## J.2 Services de régulation
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | SE-002 |
+| **Type** | Service écosystémique |
+| **Forme** | Zone avec bordure épaisse |
+| **Couleur bordure** | Orange |
+| **Épaisseur bordure** | 48px |
+| **Libellé** | "Service écosystémique forestier de type régulation" |
+
+**Description :**
+Les services de régulation correspondent aux bénéfices obtenus de la régulation des processus écosystémiques : régulation du climat (stockage carbone), régulation de l'eau (qualité, quantité), protection contre l'érosion, pollinisation.
+
+**Texte associé (SVG) :**
+> "Service écosystémique forestier de type 'régulation'"
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Stabilisation des sols forestiers | Direct | Protection contre l'érosion |
+| Évapotranspiration | Direct | Régulation climatique locale |
+| Stock de l'eau verte | Direct | Régulation hydrologique |
+| Quantité d'éléments de l'eau bleue | Direct | Régulation des ressources en eau |
+
+---
+
+## J.3 Services culturels
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | SE-003 |
+| **Type** | Service écosystémique |
+| **Forme** | Zone avec bordure épaisse |
+| **Couleur bordure** | Bleu |
+| **Épaisseur bordure** | 48px |
+| **Libellé** | "Service écosystémique forestier de type culturel" |
+
+**Description :**
+Les services culturels correspondent aux bénéfices non matériels obtenus des écosystèmes : loisirs et tourisme, valeurs esthétiques, éducation environnementale, inspiration artistique, patrimoine culturel, valeurs spirituelles.
+
+**Texte associé (SVG) :**
+> "Service écosystémique forestier de type 'culturel'"
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Habitat, refuge et nurserie | Direct | Valeur récréative de la biodiversité |
+| Accessibilité | Direct | Possibilité d'accès pour les usages récréatifs |
+| Naturalité anthropique | Direct | Valeur patrimoniale des forêts naturelles |
+
+---
+
+## J.4 Services de support
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | SE-004 |
+| **Type** | Service écosystémique (contesté) |
+| **Forme** | Zone avec bordure pointillée |
+| **Couleur bordure** | Rouge `#bd0a0a` |
+| **Style** | Pointillé (48,48) |
+| **Épaisseur bordure** | 12px |
+| **Libellé** | "Service écosystémique forestier de type support" |
+
+**Description :**
+Les services de support (ou services de soutien) sont les services nécessaires à la production de tous les autres services écosystémiques : formation des sols, cycle des nutriments, production primaire, cycle de l'eau.
+
+**Note importante (SVG) :**
+> "mis en pointillé car l'EFESE ne parle pas de fonction support"
+
+Cette catégorie est contestée dans le cadre de l'EFESE (Évaluation Française des Écosystèmes et des Services Écosystémiques), qui préfère intégrer ces fonctions directement dans les autres catégories de services.
+
+**Texte associé :**
+> "Ce service écosystémique a rôle de service de type d'approvisionnement, de régulation et aussi culturel."
+
+---
+
+# SECTION K : AUTRES VARIABLES BIOPHYSIQUES
+
+---
+
+## K.1 Gestion forestière
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-GEST-001 |
+| **Type** | Indicateur d'usage |
+| **Forme** | Parallélogramme |
+| **Couleur** | Orange `#f8d3af` |
+
+**Description :**
+Cette variable représente l'ensemble des pratiques de gestion sylvicole appliquées aux forêts : choix des essences, régimes de coupe, régénération, entretien, mise en réserve. Elle est influencée par les documents réglementaires et stratégiques.
+
+**Texte associé (SVG) :**
+> "recommandations de gestion concrètes"
+> "aménagements forestiers"
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Type de peuplement forestier | Direct | La gestion détermine les types de peuplements |
+| Diversité des essences | Direct | Choix des essences à favoriser |
+| Structure forestière | Direct | La gestion façonne la structure |
+| Maturité des peuplements | Direct | Choix de l'âge d'exploitation |
+| Libre évolution | Direct | Décision de mise en réserve |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| DRA | Direct | Prescriptions pour forêts domaniales |
+| SRA | Direct | Prescriptions pour forêts communales |
+| SRGS | Direct | Orientations pour forêts privées |
+| PRFB Grand Est | Direct | Orientations stratégiques régionales |
+| Activités humaines | Direct | Intervention humaine sur les forêts |
+
+---
+
+## K.2 Risques incendie
+
+| Attribut | Valeur |
+|----------|--------|
+| **Identifiant** | VAR-RISK-001 |
+| **Type** | Variable biophysique - Risque |
+| **Forme** | Parallélogramme |
+| **Couleur** | Rose `#ffc6c6` |
+
+**Description :**
+Cette variable évalue le risque d'incendie de forêt en fonction des conditions climatiques, topographiques et de végétation. Bien que moins prégnante dans le Grand Est que dans le sud de la France, cette variable gagne en importance avec le changement climatique.
+
+**Connexions SORTANTES :**
+
+| Nœud cible | Type | Justification |
+|------------|------|---------------|
+| Habitat, refuge et nurserie | Indirect | Les incendies détruisent les habitats |
+| Services écosystémiques | Indirect | Les incendies perturbent tous les services |
+
+**Connexions ENTRANTES :**
+
+| Nœud source | Type | Justification |
+|-------------|------|---------------|
+| Caractéristiques topographiques | Direct | La pente et l'exposition influencent le risque |
+| Modifications climatiques | Direct | L'augmentation des sécheresses accroît le risque |
+
+---
+
+# SECTION L : ÉLÉMENTS GRAPHIQUES ET LÉGENDE
+
+---
+
+## L.1 Cadre "Variables biophysiques à grande échelle"
+
+| Attribut | Valeur |
+|----------|--------|
+| **Type** | Cadre de regroupement |
+| **Dimensions** | 1293,7 × 2541,61 px |
+| **Titre** | "Variables biophysiques à grande échelle" |
+
+**Description :**
+Ce cadre regroupe l'ensemble des variables biophysiques (sections B et C) dans une zone délimitée du diagramme.
+
+---
+
+## L.2 Cadre "Fonctions écosystémiques"
+
+| Attribut | Valeur |
+|----------|--------|
+| **Type** | Cadre de regroupement |
+| **Couleur bordure** | Vert `#adf0c7` |
+| **Épaisseur** | 48px |
+
+**Description :**
+Ce cadre regroupe les fonctions écosystémiques (habitat, refuge, nurserie) dans une zone à bordure verte.
+
+---
+
+## L.3 Cadre "Stabilisation et fertilité des sols"
+
+| Attribut | Valeur |
+|----------|--------|
+| **Type** | Cadre de regroupement |
+| **Dimensions** | 2775,69 × 1502,77 px |
+
+**Description :**
+Ce cadre regroupe les indicateurs liés à la stabilisation et à la fertilité des sols forestiers.
+
+---
+
+## L.4 Cadre PRFB Grand Est
+
+| Attribut | Valeur |
+|----------|--------|
+| **Type** | Cadre de regroupement |
+| **Couleur bordure** | Vert `#0eb306` |
+| **Dimensions** | 1398,17 × 1384,36 px |
+| **Rayon coins** | 100px |
+
+**Description :**
+Ce cadre regroupe tous les éléments liés au Programme Régional de la Forêt et du Bois, y compris le Kit de données IFN régional.
+
+---
+
+# SECTION M : TABLEAU RÉCAPITULATIF DE TOUS LES NŒUDS
+
+## M.1 Synthèse par catégorie
+
+| Catégorie | Nombre de nœuds | Couleur |
+|-----------|-----------------|---------|
+| Nœuds clés (impacts) | 4 | Rouge `#ff6464` |
+| Variables biophysiques | 23 | Rose `#ffc6c6` |
+| Fonctions écosystémiques | 3 | Vert `#adf0c7` |
+| Services écosystémiques | 4 | Bordures colorées |
+| Bases de données | 8 | Gris `#b0b0b0` |
+| Documents de référence | 6 | Jaune `#fff6b6` |
+| Notes et annotations | 7 | Jaune vif `#fff79e` |
+| Transformateurs | 2 | Hexagones |
+| Indicateurs d'usage | 1 | Orange `#f8d3af` |
+| Cadres de regroupement | 4 | Variables |
+| **TOTAL** | **62+** | - |
+
+---
+
+## M.2 Liste exhaustive des nœuds par identifiant
+
+### Nœuds clés (NOEUD-CLE)
+1. NOEUD-CLE-001 : Modifications climatiques
+2. NOEUD-CLE-002 : Modification de l'usage des sols
+3. NOEUD-CLE-003 : Activités humaines
+4. NOEUD-CLE-004 : Présence de pathogènes
+
+### Variables anthropiques (VAR-ANTHRO)
+5. VAR-ANTHRO-001 : Infrastructures et aménagements
+6. VAR-ANTHRO-002 : Accessibilité
+
+### Variables floristiques (VAR-FLOR)
+7. VAR-FLOR-001 : Type de peuplement forestier
+8. VAR-FLOR-002 : Diversité d'espèces végétales
+9. VAR-FLOR-003 : Maturité des peuplements
+10. VAR-FLOR-004 : Nombre d'espèces nicheuses
+
+### Variables faunistiques (VAR-FAUN)
+11. VAR-FAUN-001 : Densité des animaux
+12. VAR-FAUN-002 : Diversité des animaux
+
+### Variables fongiques (VAR-FONG)
+13. VAR-FONG-001 : Indicateurs de la biodiversité fongique
+
+### Variables structurelles (VAR-STRUCT)
+14. VAR-STRUCT-001 : Diversité des essences
+15. VAR-STRUCT-002 : Structure forestière
+16. VAR-STRUCT-003 : Naturalité anthropique
+
+### Variables bois mort (VAR-BOIS)
+17. VAR-BOIS-001 : Diversité des vieux bois et bois morts
+18. VAR-BOIS-002 : Bois mort au sol total
+
+### Modulateurs anthropiques (VAR-MOD)
+19. VAR-MOD-001 : Libre évolution
+20. VAR-MOD-002 : Taux de boisement
+21. VAR-MOD-003 : Usages du sol
+22. VAR-MOD-004 : Caractéristiques topographiques
+
+### Variables eau (VAR-EAU)
+23. VAR-EAU-001 : Stock de l'eau verte
+24. VAR-EAU-002 : Quantité d'éléments de l'eau bleue
+25. VAR-EAU-003 : Précipitations
+26. VAR-EAU-004 : Évapotranspiration
+
+### Variables sol (VAR-SOL)
+27. VAR-SOL-001 : Caractéristiques physiques des sols
+28. VAR-SOL-002 : Caractéristiques chimiques des sols
+29. VAR-SOL-003 : Caractéristiques biologiques des sols
+
+### Variables stabilisation/fertilité (VAR-STAB/FERT)
+30. VAR-STAB-001 : Stabilisation des sols forestiers
+31. VAR-FERT-001 : Fertilité des sols
+
+### Mesures (MES)
+32. MES-001 : Mesures dendrométriques de terrain
+
+### Fonctions écosystémiques (FONC)
+33. FONC-001 : Habitat, refuge et nurserie
+
+### Transformateurs (TRANS)
+34. TRANS-001 : Transformateur principal
+35. TRANS-002 : Taux de carbone
+
+### Bases de données (DB)
+36. DB-001 : Data IFN
+37. DB-002 : Data ONB
+38. DB-003 : Data Life BiodivEst PSDRF
+39. DB-004 : Data INPN MNHN
+40. DB-005 : GéoNature PSDRF
+41. DB-006 : Kit PRFB Grand Est
+42. DB-007 : Affichage DATAIFN
+43. DB-008 : Téléchargement DATAIFN
+
+### Documents (DOC)
+44. DOC-001 : DRA (Directives Régionales d'Aménagement)
+45. DOC-002 : SRA (Schémas Régionaux d'Aménagement)
+46. DOC-003 : PRFB Grand Est 2018-2027
+47. DOC-004 : Marçais, 2019
+48. DOC-005 : Vieilles forêts des Pyrénées
+49. DOC-006 : SRGS Grand Est
+
+### Services écosystémiques (SE)
+50. SE-001 : Services d'approvisionnement
+51. SE-002 : Services de régulation
+52. SE-003 : Services culturels
+53. SE-004 : Services de support
+
+### Gestion et risques (VAR-GEST/RISK)
+54. VAR-GEST-001 : Gestion forestière
+55. VAR-RISK-001 : Risques incendie
+
+### Notes (NOTE)
+56. NOTE-001 : Note sur les DRA/SRA
+57. NOTE-002 : Note de Lise Maciejewski
+58. NOTE-003 : Note sur le site INPN
+59. NOTE-004 : Discussion avec Léa Joly
+60. NOTE-005 : Note sur les données extrapolables
+61. NOTE-006 : Note sur Eugénie Cateau
+62. NOTE-007 : Note sur les études exploratoires
+
+---
+
+# ANNEXE : CODES COULEURS COMPLETS
+
+| Code hexadécimal | Utilisation |
+|------------------|-------------|
+| `#ff6464` | Nœuds clés (rouge vif) |
+| `#ffc6c6` | Variables biophysiques (rose) |
+| `#adf0c7` | Indicateurs de fonction écosystémique (vert clair) |
+| `#c6dcff` | Indicateurs de service écosystémique (bleu clair) |
+| `#f8d3af` | Indicateurs d'usage (orange) |
+| `#b0b0b0` | Bases de données (gris) |
+| `#fff6b6` | Documents de référence (jaune) |
+| `#fff79e` | Notes et annotations (jaune vif) |
+| `#bd0a0a` | Lignes d'impact climatique/anthropique (rouge foncé) |
+| `#0eb306` | Bordure services d'approvisionnement (vert) |
+| `#e17893` | Bordure spéciale INPN (rose) |
+| `#1a1a1a` | Lignes de connexion standard (noir) |
+| `#333333` | Lignes de données (gris foncé) |
+| `#3578ff` | Liens cliquables (bleu) |
+
+---
+
+# GLOSSAIRE
+
+| Sigle | Signification |
+|-------|---------------|
+| **EFESE** | Évaluation Française des Écosystèmes et des Services Écosystémiques |
+| **SEF** | Services Écosystémiques Forestiers |
+| **DRA** | Directive Régionale d'Aménagement |
+| **SRA** | Schéma Régional d'Aménagement |
+| **SRGS** | Schéma Régional de Gestion Sylvicole |
+| **PRFB** | Programme Régional de la Forêt et du Bois |
+| **ONF** | Office National des Forêts |
+| **IGN** | Institut National de l'Information Géographique et Forestière |
+| **IFN** | Inventaire Forestier National |
+| **PSDRF** | Protocole de Suivi Dendrométrique des Réserves Forestières |
+| **ONB** | Observatoire National de la Biodiversité |
+| **INPN** | Inventaire National du Patrimoine Naturel |
+| **MNHN** | Muséum National d'Histoire Naturelle |
+| **RNF** | Réserves Naturelles de France |
+| **HAL** | Hyper Articles en Ligne (archives ouvertes) |
+| **GES** | Gaz à Effet de Serre |
+
+---
+
+*Document généré à partir du fichier SVG `IA-Kathon_logigrame_EvalSEF_3_.svg` (21 639,83 × 18 723,99 px)*
+*Outil source : Miro*
+*Projet : IA-Kathon - Évaluation des Services Écosystémiques Forestiers*
