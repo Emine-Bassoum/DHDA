@@ -106,17 +106,3 @@ if prompt := st.chat_input("De quoi dépend la production de bois par les forêt
                 st.error("Impossible de se connecter au backend. Vérifie qu'il est bien lancé sur le port 8000.")
             except Exception as e:
                 st.error(f"Une erreur est survenue : {str(e)}")
-
-with st.sidebar:
-    st.header("À propos")
-    st.write("""
-    **Des Hommes et des Arbres**
-    
-    Un collectif engagé pour l’avenir, avec et pour les arbres
-    """)
-    st.divider()
-    st.success("🌱 51 projets labellisés dans le Grand Est")
-    
-    # Petit curseur (Note: Pour l'instant ce paramètre n'est pas envoyé au backend dans ce code, 
-    # il faudrait modifier le backend pour accepter 'temperature' dans ChatRequest)
-    temperature = st.slider("Niveau d'inspiration de l'IA", 0.0, 1.0, 0.7)
