@@ -39,3 +39,37 @@ uvicorn app.main:app --reload
 ```
 
 L'API sera accessible sur http://127.0.0.1:8000.
+
+--------------------------------------
+
+## 🐳 Déploiement avec Docker
+
+### Build automatique via GitHub Actions
+Ce projet dispose d'un workflow GitHub Actions qui compile automatiquement le projet et crée une image Docker. L'image est publiée sur GitHub Container Registry (GHCR).
+
+Le workflow se déclenche :
+- À chaque push sur les branches `main` ou `master`
+- À chaque pull request vers `main` ou `master`
+- Manuellement via l'onglet Actions
+
+### Utiliser l'image Docker
+
+Vous pouvez télécharger et utiliser l'image Docker publiée :
+
+```bash
+docker pull ghcr.io/emine-bassoum/dhda:latest
+docker run -p 8000:8000 -p 8501:8501 --env-file .env ghcr.io/emine-bassoum/dhda:latest
+```
+
+### Build local avec Docker
+
+Pour construire l'image localement :
+
+```bash
+docker build -t dhda:latest .
+docker run -p 8000:8000 -p 8501:8501 --env-file .env dhda:latest
+```
+
+L'application sera accessible sur :
+- Backend (API FastAPI) : http://localhost:8000
+- Frontend (Streamlit) : http://localhost:8501
