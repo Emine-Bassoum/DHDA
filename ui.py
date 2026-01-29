@@ -36,6 +36,9 @@ def apply_dhda_design():
         .stAppDeployButton { display: none !important; }
         footer { visibility: hidden; }
         
+        /* Masquer la navigation des pages */
+        [data-testid="stSidebarNav"] { display: none !important; }
+        
         header {
             background-color: rgba(0,0,0,0) !important;
             border-bottom: none !important;
@@ -117,6 +120,11 @@ with st.sidebar:
     st.info(f"Mode activé : **{current_profile.upper()}**")
     st.divider()
     st.success("🌱 51 projets labellisés")
+    
+    st.divider()
+    st.subheader("📊 Visualisation")
+    if st.button("🗺️ Voir le Graphe Miro"):
+        st.switch_page("pages/Graphe_Miro.py")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
