@@ -24,7 +24,12 @@ def apply_dhda_design():
 
         html, body, [class*="css"] { font-family: 'Roboto', sans-serif; color: #333333; }
         :root { --dhda-magenta: #d100ff; }
-        .stApp { background-color: #FFFFFF; }
+        
+        /* Nouveau fond d'écran avec dégradé magenta doux */
+        .stApp { 
+            background: linear-gradient(135deg, #ffffff 0%, #fdf0ff 100%);
+            background-attachment: fixed;
+        }
         
         h1 {
             color: #1a1a1a !important;
@@ -47,7 +52,7 @@ def apply_dhda_design():
             border-radius: 50px !important;
             border: 2px solid var(--dhda-magenta) !important;
             color: var(--dhda-magenta) !important;
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.8); /* Fond légèrement blanc pour lisibilité */
             transition: 0.3s;
             font-weight: bold;
         }
@@ -57,12 +62,13 @@ def apply_dhda_design():
         }
         
         .stat-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
             border-radius: 15px;
             padding: 20px;
             text-align: center;
             border-left: 4px solid var(--dhda-magenta);
             margin: 10px 0;
+            box-shadow: 0 4px 15px rgba(209, 0, 255, 0.1); /* Ombre douce violette */
         }
         
         .stat-number {
@@ -78,27 +84,30 @@ def apply_dhda_design():
         }
         
         .quote-box {
-            background-color: #f8f9fa;
+            background-color: rgba(255, 255, 255, 0.9);
             border-left: 4px solid var(--dhda-magenta);
             padding: 20px;
             margin: 20px 0;
             font-style: italic;
             border-radius: 0 10px 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         
         .highlight-box {
-            background: linear-gradient(135deg, #d100ff15 0%, #d100ff05 100%);
+            background: linear-gradient(135deg, rgba(209, 0, 255, 0.15) 0%, rgba(209, 0, 255, 0.05) 100%);
             border-radius: 15px;
             padding: 25px;
             margin: 15px 0;
+            border: 1px solid rgba(209, 0, 255, 0.1);
         }
         
         .tree-fact {
-            background-color: #e8f5e9;
+            background-color: rgba(232, 245, 233, 0.95);
             border-radius: 10px;
             padding: 15px;
             margin: 10px 0;
             border-left: 4px solid #4caf50;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
     </style>
     """, unsafe_allow_html=True)
