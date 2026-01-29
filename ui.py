@@ -1,38 +1,66 @@
 import streamlit as st
 
-def local_css():
+st.set_page_config(
+    page_title="Des Hommes et Des Arbres",
+    page_icon="https://deshommesetdesarbres.org/wp-content/uploads/2021/03/cropped-favicon-dhda-32x32.png", # Teste avec cet emoji d'abord
+    layout="wide"
+)
+
+def apply_dhda_design():
     st.markdown("""
     <style>
-        /* Changer la couleur de fond principale */
-        .stApp {
-            background-color: #f1f8e9; /* Un vert très pâle */
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
         
-        /* Personnaliser les bulles de chat */
-        [data-testid="stChatMessage"] {
-            background-color: #ffffff;
-            border-radius: 15px;
-            border: 1px solid #c5e1a5;
-            box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+        /* 1. Cache le bouton Deploy et le footer Streamlit sans bloquer le menu */
+        .stAppDeployButton { display: none !important; }
+        footer { visibility: hidden; }
+        
+        /* 2. Rendre le header discret mais laisser le menu accessible */
+        header {
+            background-color: rgba(0,0,0,0) !important;
+            border-bottom: none !important;
         }
 
-        /* Titres en vert forêt */
-        h1, h2, h3 {
-            color: #2e7d32 !important;
-            font-family: 'Helvetica Neue', sans-serif;
+        /* Le reste de ton design DHDA */
+        html, body, [class*="css"] { font-family: 'Roboto', sans-serif; color: #333333; }
+        :root { --dhda-magenta: #d100ff; }
+        .stApp { background-color: #FFFFFF; }
+        
+        h1 {
+            color: #1a1a1a !important;
+            font-weight: 700 !important;
+            border-bottom: 2px solid var(--dhda-magenta);
+            padding-bottom: 10px;
         }
 
-        /* Modifier la barre de saisie */
-        .stChatInputContainer {
-            padding-bottom: 20px;
+        .stButton>button {
+            border-radius: 50px !important;
+            border: 2px solid var(--dhda-magenta) !important;
+            color: var(--dhda-magenta) !important;
+            background-color: transparent;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+        .stButton>button:hover {
+            background-color: var(--dhda-magenta) !important;
+            color: white !important;
         }
     </style>
     """, unsafe_allow_html=True)
 
-local_css()
+apply_dhda_design()
+st.image("./logo_DHDA.png", width=250)
 
-st.title("🌳 Des Hommes et des Arbres")
+st.title("Un collectif engagé pour l’avenir")
 st.caption("Explorez les liens entre thématiques, impacts et grandes variables")
+
+with st.sidebar:
+    st.markdown("### Le Collectif")
+    st.write("""
+    En Grand Est, Des Hommes et Des Arbres identifie, encourage et fait émerger des projets innovants avec et pour les arbres, au service des territoires.
+    """)
+    st.divider()
+    st.success("🌱 51 projets labellisés dans le Grand Est")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -51,16 +79,3 @@ if prompt := st.chat_input("De quoi dépend la production de bois par les forêt
         st.markdown(response)
     
     st.session_state.messages.append({"role": "assistant", "content": response})
-
-with st.sidebar:
-    st.header("À propos")
-    st.write("""
-    **Des Hommes et des Arbres**
-    
-    Un collectif engagé pour l’avenir, avec et pour les arbres
-    """)
-    st.divider()
-    st.success("🌱 51 projets labellisés dans le Grand Est")
-    
-    # Petit curseur pour ajuster le "ton" de l'IA (Créativité)
-    temperature = st.slider("Niveau d'inspiration de l'IA", 0.0, 1.0, 0.7)
