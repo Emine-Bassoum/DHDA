@@ -12,11 +12,9 @@ load_dotenv()
 app = FastAPI(title="Hackathon Arbres API")
 
 # -- Chargement des données au démarrage --
-# On construit le chemin vers le fichier data/graph_data.txt
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_FILE = os.path.join(BASE_DIR, "data", "graph_data.txt")
 
-# Variable globale pour stocker le texte du graphe
 GRAPH_CONTENT = ""
 
 @app.on_event("startup")
@@ -32,8 +30,8 @@ async def startup_event():
 # -- Modèles de données pour l'API --
 class ChatRequest(BaseModel):
     question: str
-    # Optionnel : thread_id pour gérer plusieurs conversations si besoin
     thread_id: str = "default_thread"
+    profile: str = "formateur" 
 
 class ChatResponse(BaseModel):
     response: str
@@ -44,14 +42,13 @@ async def chat_endpoint(request: ChatRequest):
     if not GRAPH_CONTENT:
         raise HTTPException(status_code=500, detail="Les données du graphe ne sont pas chargées.")
 
-    # On prépare l'input pour LangGraph
-    # On passe la question de l'utilisateur ET le contexte chargé
+    # On passe la question, le contexte ET le profil à LangGraph
     inputs = {
         "messages": [("user", request.question)],
-        "context": GRAPH_CONTENT
+        "context": GRAPH_CONTENT,
+        "profile": request.profile
     }
 
-    # Configuration pour gérer la mémoire (optionnel pour le hackathon mais bonne pratique)
     config = {"configurable": {"thread_id": request.thread_id}}
 
     try:
@@ -77,7 +74,6 @@ async def chat_endpoint(request: ChatRequest):
 
     except Exception as e:
         print(f"Erreur backend: {e}")
-        # On renvoie l'erreur en string pour débugger plus facilement côté frontend
         raise HTTPException(status_code=500, detail=str(e))
 
 

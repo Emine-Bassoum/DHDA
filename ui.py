@@ -1,5 +1,5 @@
 import streamlit as st
-import requests  # N'oublie pas d'installer requests (pip install requests)
+import requests
 import re
 from streamlit_mermaid import st_mermaid
 
@@ -13,22 +13,34 @@ st.set_page_config(
     layout="wide"
 )
 
+# --- FONCTION UTILITAIRE POUR EXTRAIRE LE MERMAID ---
+def split_response(text):
+    """
+    Sépare le texte explicatif du code Mermaid s'il existe.
+    Renvoie un tuple (texte_propre, code_mermaid_ou_none)
+    """
+    pattern = r"```mermaid\s+(.*?)\s+```"
+    match = re.search(pattern, text, re.DOTALL)
+    
+    if match:
+        mermaid_code = match.group(1)
+        text_without_code = re.sub(pattern, "", text, flags=re.DOTALL).strip()
+        return text_without_code, mermaid_code
+    return text, None
+
 def apply_dhda_design():
     st.markdown("""
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
         
-        /* 1. Cache le bouton Deploy et le footer Streamlit sans bloquer le menu */
         .stAppDeployButton { display: none !important; }
         footer { visibility: hidden; }
         
-        /* 2. Rendre le header discret mais laisser le menu accessible */
         header {
             background-color: rgba(0,0,0,0) !important;
             border-bottom: none !important;
         }
 
-        /* Le reste de ton design DHDA */
         html, body, [class*="css"] { font-family: 'Roboto', sans-serif; color: #333333; }
         :root { --dhda-magenta: #d100ff; }
         .stApp { background-color: #FFFFFF; }
@@ -61,6 +73,7 @@ st.image("./logo_DHDA.png", width=250)
 st.title("Posez-moi une question...")
 st.write("### Explorez les liens entre thématiques, impacts et grandes variables")
 
+# --- SIDEBAR AVEC LE SÉLECTEUR DE PROFIL ---
 with st.sidebar:
     st.markdown("### Le Collectif")
     st.write("""
@@ -84,31 +97,31 @@ with st.sidebar:
         </a>
     """, unsafe_allow_html=True)
     st.divider()
-    st.success("🌱 51 projets labellisés dans le Grand Est")
-    st.divider()
     
+    st.subheader("👤 Votre Profil")
+    # Le sélecteur de persona
+    selected_role = st.selectbox(
+        "Qui êtes vous ?",
+        ("Pédagogue / Grand Public", "Gestionnaire Forestier", "Décideur Public"),
+        index=0
+    )
+    
+    # Mapping vers les clés du backend
+    role_mapping = {
+        "Pédagogue / Grand Public": "formateur",
+        "Gestionnaire Forestier": "gestionnaire",
+        "Décideur Public": "decideur"
+    }
+    current_profile = role_mapping[selected_role]
+    
+    st.info(f"Mode activé : **{current_profile.upper()}**")
+    st.divider()
+    st.success("🌱 51 projets labellisés")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# --- FONCTION UTILITAIRE POUR EXTRAIRE LE MERMAID ---
-def split_response(text):
-    """
-    Sépare le texte explicatif du code Mermaid s'il existe.
-    Renvoie un tuple (texte_propre, code_mermaid_ou_none)
-    """
-    # Regex pour capturer le contenu entre ```mermaid et ```
-    pattern = r"```mermaid\s+(.*?)\s+```"
-    match = re.search(pattern, text, re.DOTALL)
-    
-    if match:
-        mermaid_code = match.group(1)
-        # On enlève le bloc de code du texte principal pour ne pas l'afficher en double
-        text_without_code = re.sub(pattern, "", text, flags=re.DOTALL).strip()
-        return text_without_code, mermaid_code
-    return text, None
-
-# Affichage des messages précédents
+# Affichage des messages
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         # Si c'est un message assistant, on vérifie s'il y a du mermaid
@@ -127,12 +140,15 @@ if prompt := st.chat_input("De quoi dépend la production de bois par les forêt
         st.markdown(prompt)
 
     with st.chat_message("assistant"):
-        with st.spinner("L'IA analyse le graphe..."):
+        with st.spinner(f"L'IA analyse ({current_profile})..."):
             try:
-                # Préparation des données comme attendu par ta classe ChatRequest dans main.py
-                payload = {"question": prompt, "thread_id": "streamlit_session"}
+                # Ajout du profil dans la requête
+                payload = {
+                    "question": prompt, 
+                    "thread_id": "streamlit_session",
+                    "profile": current_profile
+                }
                 
-                # Envoi de la requête POST
                 response = requests.post(API_URL, json=payload)
                 
                 if response.status_code == 200:
@@ -149,12 +165,11 @@ if prompt := st.chat_input("De quoi dépend la production de bois par les forêt
                     if mermaid_code:
                         st_mermaid(mermaid_code, height=350)
                     
-                    # 4. On sauvegarde TOUT le contenu brut dans l'historique
-                    # (Comme ça au rechargement de la page, la boucle ci-dessus refera le parsing)
                     st.session_state.messages.append({"role": "assistant", "content": raw_response})
-                
                 else:
-                    st.error(f"Erreur API ({response.status_code})")
+                    st.error(f"Erreur API ({response.status_code}) : {response.text}")
             
+            except requests.exceptions.ConnectionError:
+                st.error("Impossible de se connecter au backend sur le port 8000.")
             except Exception as e:
                 st.error(f"Erreur : {str(e)}")
